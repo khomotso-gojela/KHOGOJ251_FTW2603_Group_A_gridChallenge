@@ -59,18 +59,23 @@ a {
 /* ===== main ====== */
 
 main {
-
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "main aside";
 }
 
 .main-content {
     padding: 1.25rem;
     margin-bottom: 2rem;
+    grid-area: main;
 }
 
 
 .aside-content {
     position: sticky;
     top: 5rem;
+    grid-area: aside;
 }
 .aside-link:hover {
     border-radius: 7px;
@@ -85,6 +90,9 @@ main {
 
 .categories {
     text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
 }
 
 .category {
@@ -111,6 +119,8 @@ button:hover {
 .sponsors {
     display: grid;
     text-align: center;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr)
 }
 
 .sponsors > div {
@@ -126,6 +136,9 @@ button:hover {
 
     padding: 2rem;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3,1fr);
 }
 
 #footer > div {
@@ -136,9 +149,10 @@ button:hover {
 /* ===== grid modifiers ===== */
 
 .col-span-2 {
+    grid-column-start: span 2;
 
 }
 
 .row-span-2 {
-
+    grid-row    -start: span 2    
 }
