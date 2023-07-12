@@ -154,5 +154,5 @@ button:hover {
 }
 
 .row-span-2 {
-    grid-row    -start: span 2    
+    grid-row-start: span 2    
 }
